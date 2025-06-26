@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/loginback" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="用户名:" />
+            <com.example.whichbin.ui.home.EditTextWithDel android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:id="@+id/accountEdit" android:layout_width="200.0dip" android:layout_height="fill_parent" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="密码:" />
+            <com.example.whichbin.ui.home.EditTextWithDel android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:id="@+id/passwordEdit" android:layout_width="200.0dip" android:layout_height="fill_parent" android:singleLine="true" android:inputType="textPassword" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <CheckBox android:id="@+id/rememberPass" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/greendark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="记住密码" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:textSize="18.0sp" android:layout_gravity="center_horizontal" android:id="@+id/login" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="登录" android:layout_weight="1.0" android:backgroundTint="@color/green" />
+            <View android:layout_width="20.0dip" android:layout_height="fill_parent" />
+            <Button android:textSize="18.0sp" android:layout_gravity="center_horizontal" android:id="@+id/register" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="注册" android:layout_weight="1.0" android:backgroundTint="@color/green" />
+        </LinearLayout>
+        <TextView android:textSize="18.0dip" android:textStyle="italic" android:gravity="center" android:id="@+id/visiterBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="游客登录" />
+    </LinearLayout>
+</RelativeLayout>

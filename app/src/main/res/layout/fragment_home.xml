@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@+id/home_back" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/home_back" app:layout_constraintDimensionRatio="54:25" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView android:id="@+id/search_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_margin="20.0dip" android:elevation="50.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/home_back">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.example.whichbin.ui.home.EditTextWithDel android:textSize="15.0dip" android:id="@+id/target" android:background="@color/white" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="输入关键词，可查询垃圾类别" android:layout_weight="1.0" android:layout_marginStart="10.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/home_back2" />
+            <ImageButton android:id="@+id/detectBtn" android:background="@color/white" android:padding="3.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/icon_photo" android:scaleType="fitCenter" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/home_back2" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/home_recyclerView" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="500.0dip" android:elevation="10.0dip" app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/home_middle" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="50.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/home_back">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageButton android:id="@+id/middle_Btn1" android:background="@color/white" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="50.0dip" android:src="@drawable/bin1" android:scaleType="fitCenter" android:layout_weight="1.0" />
+            <ImageButton android:id="@+id/middle_Btn2" android:background="@color/white" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="50.0dip" android:src="@drawable/bin2" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/blue" android:gravity="center" android:id="@+id/middle1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:text="可回收物" android:layout_weight="1.0" />
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/greenmiddle" android:gravity="center" android:id="@+id/middle2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="厨余垃圾" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageButton android:id="@+id/middle_Btn3" android:background="@color/white" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="50.0dip" android:src="@drawable/bin3" android:scaleType="fitCenter" android:layout_weight="1.0" />
+            <ImageButton android:id="@+id/middle_Btn4" android:background="@color/white" android:padding="20.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="50.0dip" android:src="@drawable/bin4" android:scaleType="fitCenter" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/yellow" android:gravity="center" android:id="@+id/middle3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:text="其它垃圾" android:layout_weight="1.0" />
+            <TextView android:textSize="15.0dip" android:textStyle="bold" android:textColor="@color/red" android:gravity="center" android:id="@+id/middle4" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="有害垃圾" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

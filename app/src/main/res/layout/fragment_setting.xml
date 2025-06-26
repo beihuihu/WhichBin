@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@+id/cardView5" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="25.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintDimensionRatio="54:25" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/setting_back" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cardView6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintTop_toBottomOf="@+id/cardView5"
+        tools:ignore="MissingConstraints">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_user" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="用户名" android:layout_weight="1.0" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/textView" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_marginRight="5.0dip" android:text="admin" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cardView3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintTop_toBottomOf="@+id/cardView6"
+        tools:ignore="MissingConstraints">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/creditBtn" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_score" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="积分" android:layout_weight="1.0" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/setting_credit" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_marginRight="5.0dip" android:text="0" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:ignore="MissingConstraints">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/placeBtn" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_place" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="地区" android:layout_weight="1.0" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/currentplace" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_marginRight="5.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cardView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintTop_toBottomOf="@+id/cardView" tools:ignore="MissingConstraints">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/setting_mark" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <ImageView android:padding="5.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_mark" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="给我们打分" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/cardView4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" app:cardCornerRadius="4.0dip" app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        tools:ignore="MissingConstraints">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/setting_exit" android:layout_width="fill_parent" android:layout_height="55.0dip">
+            <ImageView android:padding="15.0dip" android:layout_width="55.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/icon_exit" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="退出" android:layout_weight="1.0" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

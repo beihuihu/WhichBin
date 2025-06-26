@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.whichbin">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.WhichBin" android:usesCleartextTraffic="true">
+        <activity android:exported="false" android:label="@string/title_activity_photo" android:name="com.example.whichbin.classification.PhotoActivity" android:screenOrientation="portrait" android:theme="@style/Theme.WhichBin.NoActionBar"/>
+        <activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="false" android:name="com.example.whichbin.RealTimeActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.example.whichbin.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.example.whichbin.WelcomeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.whichbin.ui.setting.PlaceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.whichbin.Login.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.whichbin.Login.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="false" android:name="com.example.whichbin.Login.Feedback.FeedbackActivity" android:screenOrientation="portrait"/>
+<!--        <provider android:authorities="com.example.whichbin.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">-->
+<!--            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>-->
+<!--        </provider>-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.whichbin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+    </application>
+</manifest>

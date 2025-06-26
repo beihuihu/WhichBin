@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:label="@string/title_home"
+        android:name="com.example.whichbin.ui.home.HomeFragment"
+        android:id="@id/navigation_home" />
+    <fragment
+        android:label="cyclogedic"
+        android:name="com.example.whichbin.ui.cyclogedic.CyclogedicFragment"
+        android:id="@id/navigation_cyclogedic" />
+    <fragment
+        android:label="setting"
+        android:name="com.example.whichbin.ui.setting.SettingFragment"
+        android:id="@id/navigation_setting" />
+</navigation>

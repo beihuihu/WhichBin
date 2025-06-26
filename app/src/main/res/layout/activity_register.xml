@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/loginback" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="用户名:" />
+                <com.example.whichbin.ui.home.EditTextWithDel android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:id="@id/accountEdit" android:layout_width="200.0dip" android:layout_height="fill_parent" android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="密码:" />
+                <com.example.whichbin.ui.home.EditTextWithDel android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:id="@id/passwordEdit" android:layout_width="200.0dip" android:layout_height="fill_parent" android:singleLine="true" android:inputType="textPassword" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+                <TextView android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:layout_width="90.0dip" android:layout_height="wrap_content" android:text="确认密码:" />
+                <com.example.whichbin.ui.home.EditTextWithDel android:textColor="@color/greendark" android:layout_gravity="center_vertical" android:id="@+id/passwordCheckEdit" android:layout_width="200.0dip" android:layout_height="fill_parent" android:singleLine="true" android:inputType="textPassword" />
+            </LinearLayout>
+            <Button android:textSize="18.0dip" android:textColor="@color/greendark" android:layout_gravity="center_horizontal" android:id="@id/register" android:layout_width="fill_parent" android:layout_height="50.0dip" android:text="确认注册" android:backgroundTint="@color/green" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

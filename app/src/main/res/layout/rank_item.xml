@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:elevation="10.0dip" android:backgroundTint="@color/white" app:cardCornerRadius="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="55.0dip">
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/rank" android:padding="15.0dip" android:layout_width="90.0dip" android:layout_height="55.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/trash1" android:text="第一名" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/username" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:layout_marginLeft="5.0dip" android:text="ivan" android:layout_weight="1.0" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="left" android:id="@+id/credit" android:padding="15.0dip" android:layout_width="0.0dip" android:layout_height="55.0dip" android:text="0" android:layout_weight="1.0" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

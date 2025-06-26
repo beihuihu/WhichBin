@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:opencv="http://schemas.android.com/apk/res-auto">
+    <Toolbar android:id="@+id/real_toolBar" android:background="@color/green" android:layout_width="fill_parent" android:layout_height="75.0dip" opencv:layout_constraintTop_toTopOf="parent">
+        <Button android:gravity="center_vertical" android:id="@+id/real_back" android:background="@drawable/backicon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="30.0dip" android:layout_alignParentStart="true" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/greendark" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:text="实时识别" />
+    </Toolbar>
+    <org.opencv.android.JavaCameraView android:id="@+id/java_surface_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" opencv:camera_id="any" opencv:layout_constraintBottom_toBottomOf="parent" opencv:layout_constraintDimensionRatio="1:1" opencv:layout_constraintEnd_toEndOf="parent" opencv:layout_constraintStart_toStartOf="parent" opencv:layout_constraintTop_toTopOf="parent" opencv:show_fps="true" />
+    <TextView android:textSize="15.0sp" android:gravity="center" android:id="@+id/realTimeResult" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" opencv:layout_constraintBottom_toTopOf="@+id/textView2" opencv:layout_constraintTop_toBottomOf="@+id/java_surface_view" />
+    <TextView android:textColor="@color/greendark" android:gravity="center" android:id="@+id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="如果识别不准确，试试换一个角度" opencv:layout_constraintBottom_toTopOf="@+id/linearLayout" />
+    <LinearLayout android:orientation="horizontal" android:id="@+id/linearLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="45.0dip" opencv:layout_constraintBottom_toBottomOf="parent">
+        <Button android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_horizontal" android:id="@+id/info" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="拍照" android:layout_weight="1.0" android:backgroundTint="@color/green" />
+        <View android:layout_width="40.0dip" android:layout_height="fill_parent" />
+        <Button android:textSize="18.0sp" android:textColor="@color/greendark" android:layout_gravity="center_horizontal" android:id="@+id/feedbackBtn" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="反馈" android:layout_weight="1.0" android:backgroundTint="@color/green" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

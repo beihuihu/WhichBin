@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/home1"
+        android:id="@+id/navigation_home"
+        android:title="首页" />
+    <item
+        android:icon="@drawable/cy1"
+        android:id="@+id/navigation_cyclogedic"
+        android:title="百科" />
+    <item android:icon="@drawable/setting1"
+        android:id="@+id/navigation_setting"
+        android:title="设置" />
+</menu>

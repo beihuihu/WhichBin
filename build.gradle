@@ -1,0 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        // 添加 OpenCV 官方仓库
+//        maven { url 'https://maven.aliyun.com/repository/public' } // 阿里云镜像（国内推荐）
+        maven { url 'https://repo1.maven.org/maven2/' } // Maven Central
+    }
+    dependencies {
+//        classpath "com.android.tools.build:gradle:7.0.4"
+        classpath "com.android.tools.build:gradle:7.4.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20"
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

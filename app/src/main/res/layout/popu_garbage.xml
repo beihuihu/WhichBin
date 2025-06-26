@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="#66000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.cardview.widget.CardView android:id="@+id/dd" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="50.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:backgroundTint="@color/white" app:cardCornerRadius="4.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+            <ImageView android:id="@+id/popu_back" android:background="@color/white" android:padding="10.0dip" android:layout_width="50.0dip" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:src="@drawable/backicon" />
+            <TextView android:textSize="20.0sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/pop_className" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/pop_recy" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" app:layout_constraintTop_toBottomOf="@+id/dd" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
