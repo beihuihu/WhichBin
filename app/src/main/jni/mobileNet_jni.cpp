@@ -25,7 +25,7 @@ static AAssetManager* g_asset_manager = nullptr;
 extern "C" {
 
 JNIEXPORT jboolean
-Java_com_example_whichbin_MobileNet_init(JNIEnv* env, jobject thiz, jobject asset_manager) {
+Java_com_example_whichbin_classification_MobileNet_init(JNIEnv* env, jobject thiz, jobject asset_manager) {
     g_asset_manager = AAssetManager_fromJava(env, asset_manager);
     if (!g_asset_manager) {
         LOGE("Failed to get AssetManager");
@@ -77,7 +77,7 @@ Java_com_example_whichbin_MobileNet_init(JNIEnv* env, jobject thiz, jobject asse
 }
 
 // public native String Detect(Bitmap bitmap);
-JNIEXPORT jfloatArray Java_com_example_whichbin_MobileNet_detect(JNIEnv* env, jobject thiz, jobject bitmap)
+JNIEXPORT jfloatArray Java_com_example_whichbin_classification_MobileNet_detect(JNIEnv* env, jobject thiz, jobject bitmap)
 {
     // ncnn from bitmap
     ncnn::Mat in;

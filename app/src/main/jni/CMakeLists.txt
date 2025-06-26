@@ -1,4 +1,4 @@
-project("garbageclassification")
+project("whichbin")
 
 cmake_minimum_required(VERSION 3.10.2)
 

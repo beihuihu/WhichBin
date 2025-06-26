@@ -26,6 +26,7 @@ import com.example.whichbin.http.Classification
 import com.example.whichbin.http.Scores
 import com.example.whichbin.userData
 import com.yalantis.ucrop.UCrop
+import kotlinx.android.synthetic.main.activity_photo.*
 import okhttp3.MediaType
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
@@ -56,21 +57,19 @@ class PhotoActivity : BaseActivity() {
 
         // 确保Context就绪后再初始化模型
         squeezencnn = MobileNet().apply {
-            init(assets)
-//            if (!init(assets)) {
-//                Toast.makeText(this@PhotoActivity, "模型加载错误", Toast.LENGTH_SHORT).show()
+//            init(assets)
+            if (!init(assets)) {
+                Toast.makeText(this@PhotoActivity, "模型加载错误", Toast.LENGTH_SHORT).show()
 //                finish()
-//            }
+            }
         }
 
         readCacheLabelFromLocalFile()
         context = this
 
-        findViewById<Button>(R.id.photo_back).setOnClickListener {
-            finish()
-        }
+        photo_back.setOnClickListener { finish() }
 
-        findViewById<Button>(R.id.takePhotoBtn).setOnClickListener {
+        takePhotoBtn.setOnClickListener {
             createFile("output_image")
             val intent = Intent("android.media.action.IMAGE_CAPTURE").apply {
                 putExtra("output", imageUri)
@@ -78,7 +77,7 @@ class PhotoActivity : BaseActivity() {
             startActivityForResult(intent, takePhoto)
         }
 
-        findViewById<Button>(R.id.fromAlbumBtn).setOnClickListener {
+        fromAlbumBtn.setOnClickListener {
             createFile("output_image")
             val intent = Intent("android.intent.action.GET_CONTENT").apply {
                 type = "image/*"
@@ -86,7 +85,7 @@ class PhotoActivity : BaseActivity() {
             startActivityForResult(intent, fromAlbum)
         }
 
-        findViewById<TextView>(R.id.question).setOnClickListener {
+        question.setOnClickListener {
             if (userData.userName != "游客") {
                 Intent(this, FeedbackActivity::class.java).apply {
                     putExtra("Uri", imageUri.toString())
@@ -348,38 +347,6 @@ class PhotoActivity : BaseActivity() {
                 }
             }
         }
-    }
-
-    private fun upload_image() {
-        val part = MultipartBody.Part.createFormData(
-            "image",
-            outputImage!!.name,
-            RequestBody.create(
-                MediaType.parse("multipart/form-data"),
-                outputImage!!
-            )
-        )
-
-        ServiceCreater.creat(ClassicService::class.java, this)
-            .getResult(part)
-            .enqueue(object : Callback<Classification> {
-                override fun onResponse(call: Call<Classification>, response: Response<Classification>) {
-                    response.body()?.let { classification ->
-                        if (classification.score > 0.75) {
-                            findViewById<CardView>(R.id.detect_result).visibility = View.VISIBLE
-                            findViewById<TextView>(R.id.question).visibility = View.VISIBLE
-                            getResult(classification.garbageClass)
-                        } else {
-                            showNoResult()
-                        }
-                    } ?: showNoResult()
-                }
-
-                override fun onFailure(call: Call<Classification>, t: Throwable) {
-                    Toast.makeText(this@PhotoActivity, "无法连接服务器", Toast.LENGTH_SHORT).show()
-                    showNoResult()
-                }
-            })
     }
 
     private fun showNoResult() {
